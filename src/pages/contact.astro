@@ -5,25 +5,28 @@ import Icon from "../components/Icon.astro";
 import { SITE } from "../lib/blog-data.js";
 import { CONTACT, FORMS } from "../config/theme.config.ts";
 
-const hasContactEndpoint = Boolean(FORMS.contact.action);
+const hasContactEndpoint = false;
 const contactAction = hasContactEndpoint ? FORMS.contact.action : "/contact";
 const contactMethod = hasContactEndpoint ? FORMS.contact.method : "get";
 const contactEnctype = hasContactEndpoint ? FORMS.contact.enctype : undefined;
 ---
 
 <BaseLayout
-  title={`Contact - ${SITE.name}`}
-  description={`Get in touch with ${SITE.name}.`}
+  title={`Kontakt - ${SITE.name}`}
+  description={`Kontakt ${SITE.name}.`}
   canonical="/contact"
 >
   <div class="mx-auto max-w-3xl px-5 py-12">
-    <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Contact" }]} />
+    <Breadcrumbs items={[{ label: "Startseite", to: "/" }, { label: "Kontakt" }]} />
 
     <header class="mt-6">
-      <div class="text-xs font-medium uppercase tracking-[0.2em] text-primary">Contact</div>
-      <h1 class="mt-2 font-serif text-5xl font-semibold">Say hello.</h1>
+      <div class="text-xs font-medium uppercase tracking-[0.2em] text-primary">Kontakt</div>
+      <h1 class="mt-2 font-serif text-5xl font-semibold">Sag' Hallo.</h1>
       <p class="mt-4 max-w-xl text-muted-foreground">
-        Notes, corrections, pitches, or just a thought. We read everything and reply to most of it.
+        Du hast Interesse mitzumachen? Willst uns positive oder negative Rückmeldung geben?
+      </p>
+      <p class="mt-4 max-w-xl text-muted-foreground">
+        Dann schreib' uns...
       </p>
     </header>
 

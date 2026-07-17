@@ -25,19 +25,6 @@ export const CONTACT = {
   socialUrl: "TODO",
 };
 
-export const FORMS = {
-  contact: {
-    action: "",
-    method: "post",
-    enctype: "application/x-www-form-urlencoded",
-  },
-  newsletter: {
-    action: "",
-    method: "post",
-    enctype: "application/x-www-form-urlencoded",
-  },
-};
-
 export const SOCIAL_LINKS = [
   { href: CONTACT.socialUrl, label: `${SITE.name} on X`, icon: "twitter" },
   { href: SITE.repositoryUrl, label: `${SITE.name} on GitHub`, icon: "github" },
