@@ -5,26 +5,26 @@ const siteUrl = (
 ).replace(/\/$/, "");
 
 export const SITE = {
-  name: "Quiet Pages",
+  name: "Verschönerungsverein Hertlingshausen",
   description:
-    "An independent magazine on writing, design, and the slow web. Published occasionally, read closely.",
+    "Homepage des Verschönerungsvereins Hertlingshausen",
   url: siteUrl,
-  locale: "en-US",
-  language: "en",
-  repositoryUrl: "https://github.com/andreialba/quietpages",
+  locale: "de-DE",
+  language: "de",
+  repositoryUrl: "https://github.com/hirschenberger/vvh",
 };
 
 export const NAVIGATION = [
-  { to: "/", label: "Home" },
-  { to: "/blog", label: "Writing" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", label: "Startseite" },
+  { to: "/blog", label: "Artikel" },
+  { to: "/about", label: "Über den Verein" },
+  { to: "/contact", label: "Kontakt" },
 ];
 
 export const CONTACT = {
-  email: "hello@example.com",
-  socialHandle: "@quietpages",
-  socialUrl: "https://x.com/quietpages",
+  email: "falco.hirschenberger@gmail.com",
+  socialHandle: "TODO",
+  socialUrl: "TODO",
 };
 
 export const FORMS = {
@@ -41,7 +41,6 @@ export const FORMS = {
 };
 
 export const SOCIAL_LINKS = [
-  { href: "/rss.xml", label: "RSS feed", icon: "rss" },
   { href: CONTACT.socialUrl, label: `${SITE.name} on X`, icon: "twitter" },
   { href: SITE.repositoryUrl, label: `${SITE.name} on GitHub`, icon: "github" },
   { href: `mailto:${CONTACT.email}`, label: "Email", icon: "mail" },
@@ -49,46 +48,31 @@ export const SOCIAL_LINKS = [
 
 export const authors = [
   {
-    slug: "elena-march",
-    name: "Elena March",
-    bio: "Writer & editor covering design, craft, and slow technology.",
+    slug: "falco",
+    name: "Falco Hirschenberger",
+    bio: "Webmaster",
     longBio:
-      "Elena March writes about the quiet edges of design and technology. Previously an editor at two small magazines, she now publishes essays and field notes from a desk overlooking the harbour.",
+      "",
     avatar: "/avatars/elena-march.svg",
   },
   {
-    slug: "samuel-okafor",
-    name: "Samuel Okafor",
-    bio: "Software engineer with a soft spot for typography and the open web.",
+    slug: "jörg",
+    name: "Jörg Noll",
+    bio: "Vorsitzender",
     longBio:
-      "Samuel builds tools for writers and reads more than he ships. He believes the best interfaces are the ones you don't notice.",
+      "",
     avatar: "/avatars/samuel-okafor.svg",
-  },
-  {
-    slug: "mira-iwasaki",
-    name: "Mira Iwasaki",
-    bio: "Photographer and essayist based between Kyoto and Lisbon.",
-    longBio:
-      "Mira's work sits at the intersection of place, memory, and the everyday object. Her essays have appeared in a number of small but loved publications.",
-    avatar: "/avatars/mira-iwasaki.svg",
   },
 ];
 
 export const categories = [
-  { slug: "essays", name: "Essays" },
-  { slug: "design", name: "Design" },
-  { slug: "engineering", name: "Engineering" },
-  { slug: "field-notes", name: "Field Notes" },
-  { slug: "interviews", name: "Interviews" },
+  { slug: "veranstaltungen", name: "Veranstaltungen" },
+  { slug: "organisation", name: "Organisation" },
 ];
 
 export const tags = [
-  { slug: "writing", name: "Writing" },
-  { slug: "typography", name: "Typography" },
-  { slug: "minimalism", name: "Minimalism" },
-  { slug: "tools", name: "Tools" },
-  { slug: "travel", name: "Travel" },
-  { slug: "process", name: "Process" },
-  { slug: "web", name: "Web" },
-  { slug: "books", name: "Books" },
+  { slug: "sauhäuschen-kerwe", name: "Sauhäuschen Kerwe" },
+  { slug: "eingeschärrtes", name: "Eingeschärrtes" },
+  { slug: "arbeitseinsatz", name: "Arbeitseinsatz" },
+  { slug: "feiern", name: "Feiern" },
 ];

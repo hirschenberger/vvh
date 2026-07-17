@@ -3,10 +3,11 @@ import mdx from "@astrojs/mdx";
 import tailwindcss from "@tailwindcss/vite";
 
 const site =
-  process.env.SITE_URL || process.env.PUBLIC_SITE_URL || "https://quietpages-eta.vercel.app";
+  "https://hirschenberger.github.io";
 
 export default defineConfig({
   site,
+  base: "/",
   integrations: [mdx()],
   vite: {
     plugins: [tailwindcss()],

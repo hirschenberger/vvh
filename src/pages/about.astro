@@ -5,33 +5,39 @@ import { SITE, authors } from "../lib/blog-data.js";
 ---
 
 <BaseLayout
-  title={`About - ${SITE.name}`}
+  title={`Über den Verein - ${SITE.name}`}
   description={`About ${SITE.name}: an independent magazine on writing, design, and the slow web.`}
   canonical="/about"
 >
   <div class="mx-auto max-w-3xl px-5 py-12">
-    <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "About" }]} />
+    <Breadcrumbs items={[{ label: "Startseite", to: "/" }, { label: "Über den Verein" }]} />
 
     <header class="mt-6">
-      <div class="text-xs font-medium uppercase tracking-[0.2em] text-primary">About</div>
+      <div class="text-xs font-medium uppercase tracking-[0.2em] text-primary">Über</div>
       <h1 class="mt-2 font-serif text-5xl font-semibold leading-[1.05]">
-        A quiet magazine for the open web.
+        Über den Verein
       </h1>
     </header>
 
     <div class="prose-article mt-10">
+      <h2>Historie</h2>
       <p>
-        {SITE.name} began as a folder of notes, drafts, and half-finished essays &mdash; the kind of writing that doesn't survive the timeline. We started publishing it here because we wanted somewhere slower to read, and somewhere slower to write.
+        Der Verein wurde am 15. Januar 1899 gegründet. Zur Gründungszeit zählte der Verein 30 Mitglieder.
       </p>
       <p>
-        The magazine is independent, occasional, and unsponsored. We publish when the work is ready and not before. There are no trackers, no pop-ups, and no infinite scroll. Just sentences, photographs, and the occasional conversation.
+        Im Laufe der Jahre haben sich bis heute über 260 Mitglieder dem Verein angeschlossen und er wurde zum festen Bestandteil des Hertlingshäuser Lebens.
       </p>
-      <h2 id="what-we-publish">What we publish</h2>
+      <h2>Vorsitzende</h2>
       <p>
-        Essays on writing, design, and the craft of the web. Field notes from places we love. Interviews with people who make things with their hands. The occasional photograph, when one is worth printing.
+        Unter Leitung von <i>Horst Schmidt</i> erfolgte in den letzten Jahrzehnten eine deutliche Ausweitung der Vereinsaktivitäten. Ihm folgten in den zurückliegenden Jahren, <i>Kurt Franzreb</i>, <i>Werner Noll</i> (Ehrenvorsitzender), <i>Friedrich Emmert</i> und aktuell  <i>Jörg Noll</i> als Vorsitzende des Vereins. 
       </p>
-      <h2 id="who-we-are">Who we are</h2>
-      <p>A small editorial team, scattered across three time zones, who would rather be reading.</p>
+      <h2>Aktivitäten</h2>
+      <p>
+        Zu unseren Aktivitäten zählen u.a. die Pflege des Denkmals in Hertlingshausen, Bänke des Vereins kontrollieren und ggf. instand setzen, Osterbrunnen schmücken, Weihnachtsbaum aufstellen.
+      </p>
+      <p>
+        Ursprünglich wurde die Sauhäuschenkerwe am alten Sauhäuschen im Wald gefeiert. Von Hertlingshausen wanderten die Bürger unter Führung der Blaskapelle an den alten Standort. Auch im Wald war eine Kinderreitschule vorhanden.
+      </p>
     </div>
 
     <section class="mt-12 border-t border-border pt-10">

@@ -79,8 +79,8 @@ const jsonLd = {
   <article class="mx-auto max-w-6xl px-5 py-10">
     <Breadcrumbs
       items={[
-        { label: "Home", to: "/" },
-        { label: "Archive", to: "/blog" },
+        { label: "Startseite", to: "/" },
+        { label: "Artikel", to: "/blog" },
         ...(category ? [{ label: category.name, to: `/categories/${category.slug}` }] : []),
         { label: post.title },
       ]}

@@ -9,15 +9,15 @@ const posts = await sortedPosts();
 ---
 
 <BaseLayout
-  title={`Archive - ${SITE.name}`}
-  description="Every essay, field note, and interview we've published. Search and filter by category or tag."
+  title={`Artikel - ${SITE.name}`}
+  description="Arbeite, feiere und sprich darüber"
   canonical="/blog"
 >
   <div class="mx-auto max-w-4xl px-5 py-12" data-archive>
-    <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Archive" }]} />
-    <h1 class="mt-4 font-serif text-4xl font-semibold sm:text-5xl">The archive</h1>
+    <Breadcrumbs items={[{ label: "Startseite", to: "/" }, { label: "Artikel" }]} />
+    <h1 class="mt-4 font-serif text-4xl font-semibold sm:text-5xl">Artikel</h1>
     <p class="mt-3 max-w-xl text-muted-foreground">
-      Every piece we've published. {posts.length} essays, field notes, and interviews.
+      Arbeite, feiere und sprich darüber...
     </p>
 
     <form data-archive-search class="mt-8 flex items-center gap-2 border-b border-border pb-2">
@@ -25,8 +25,8 @@ const posts = await sortedPosts();
       <input
         data-archive-query
         name="q"
-        aria-label="Search the archive"
-        placeholder="Search the archive..."
+        aria-label="Suche"
+        placeholder="Suche nach Artikeln..."
         class="w-full border-0 bg-transparent py-2 outline-none placeholder:text-muted-foreground"
       />
       <button
@@ -35,14 +35,14 @@ const posts = await sortedPosts();
         class="text-xs text-muted-foreground hover:text-foreground"
         hidden
       >
-        Clear
+        Lösche
       </button>
     </form>
 
     <div class="mt-6 space-y-4 text-sm">
       <div class="flex flex-wrap items-center gap-2">
-        <span class="text-xs uppercase tracking-wider text-muted-foreground">Categories</span>
-        <a data-category-filter="" href="/blog" class="rounded-full border px-3 py-1 text-xs">All</a>
+        <span class="text-xs uppercase tracking-wider text-muted-foreground">Kategorien</span>
+        <a data-category-filter="" href="/blog" class="rounded-full border px-3 py-1 text-xs">Alle</a>
         {
           categories.map((category) => (
             <a data-category-filter={category.slug} href={`/categories/${category.slug}`} class="rounded-full border px-3 py-1 text-xs">
@@ -66,8 +66,8 @@ const posts = await sortedPosts();
     <div data-archive-count class="mt-6 text-sm text-muted-foreground"></div>
 
     <div data-archive-empty class="mt-12 rounded-md border border-dashed border-border py-20 text-center" hidden>
-      <div class="font-serif text-lg">No matches</div>
-      <p class="mt-2 text-sm text-muted-foreground">Try a different word, or clear the filters.</p>
+      <div class="font-serif text-lg">Keine Ergebnisse gefunden</div>
+      <p class="mt-2 text-sm text-muted-foreground">Suche nach etwas Anderem oder lösche die Filter.</p>
     </div>
 
     <div data-archive-list>
@@ -149,13 +149,13 @@ const posts = await sortedPosts();
       cards.forEach((card) => (card.hidden = true));
       matches.slice(0, visibleCount).forEach((card) => (card.hidden = false));
 
-      count.textContent = `${matches.length} ${matches.length === 1 ? "result" : "results"}${state.q ? ` for "${state.q}"` : ""}`;
+      count.textContent = `${matches.length} ${matches.length === 1 ? "Ergebnis" : "Ergebnisse"}${state.q ? ` for "${state.q}"` : ""}`;
       empty.hidden = matches.length > 0;
 
       const totalPages = Math.max(1, Math.ceil(matches.length / pageSize));
       moreWrap.hidden = visibleCount >= matches.length;
-      more.textContent = `Load more (${matches.length - visibleCount} remaining)`;
-      pageText.textContent = `Page ${state.page} of ${totalPages}`;
+      more.textContent = `Weitere (${matches.length - visibleCount} Ergebnisse)`;
+      pageText.textContent = `Seite ${state.page} von ${totalPages}`;
 
       applyLinkState(categoryLinks, state.cat, activeCategory, inactiveCategory, "data-category-filter");
       applyLinkState(tagLinks, state.tag, activeTag, inactiveTag, "data-tag-filter");
