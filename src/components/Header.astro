@@ -32,7 +32,7 @@ const iconClass = isHome
           const active = exact ? current === baseUrl : current.startsWith(to);
           return (
             <a
-              href={item.to}
+              href={to}
               class={`text-sm ${active ? activeClass : inactiveClass}`}
               aria-current={active ? "page" : undefined}
             >
