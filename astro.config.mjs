@@ -7,7 +7,7 @@ const site =
 
 export default defineConfig({
   site,
-  base: "/vvh",
+  base: process.env.PUBLIC_BASE ?? "/",
   integrations: [mdx()],
   vite: {
     plugins: [tailwindcss()],
