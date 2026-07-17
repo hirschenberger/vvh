@@ -4,7 +4,7 @@ import { SITE } from "../lib/blog-data.js";
 import { NAVIGATION } from "../config/theme.config.ts";
 
 const baseUrl = import.meta.env.BASE_URL === "/" ? "" : import.meta.env.BASE_URL;
-const current = Astro.url.pathname.replace(/\/$/, "") || "/";
+const current = Astro.url.pathname.replace(/\/$/, "") || baseUrl;
 const isHome = current === baseUrl;
 const activeClass = isHome ? "home-header-link is-active" : "text-foreground";
 const inactiveClass = isHome
@@ -27,9 +27,9 @@ const iconClass = isHome
     <nav class="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
       {
         NAVIGATION.map((item) => {
-          item.to = `${baseUrl}${item.to}`;
-          const exact = item.to === "/";
-          const active = exact ? current === "/" : current.startsWith(item.to);
+          const to = `${baseUrl}${item.to}`;
+          const exact = to === baseUrl;
+          const active = exact ? current === baseUrl : current.startsWith(to);
           return (
             <a
               href={item.to}
