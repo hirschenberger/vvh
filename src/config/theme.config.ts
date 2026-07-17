@@ -1,7 +1,5 @@
 const siteUrl = (
-  import.meta.env.SITE_URL ||
-  import.meta.env.PUBLIC_SITE_URL ||
-  "https://quietpages-eta.vercel.app"
+  "https://hirschenberger@github.io/vvh"
 ).replace(/\/$/, "");
 
 export const SITE = {
