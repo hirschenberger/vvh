@@ -7,7 +7,7 @@ const site =
 
 export default defineConfig({
   site,
-  base: "/",
+  base: "/vvh",
   integrations: [mdx()],
   vite: {
     plugins: [tailwindcss()],
